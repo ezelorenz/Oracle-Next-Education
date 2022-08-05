@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Programa Calculo IMC</h3>
+
+    <script>
+
+        function saltarLinea() {
+            document.write("<br><br>");
+            document.write("<br><br>");
+            document.write("<br><br>");
+        }
+        
+        function imprimir(frase) {
+
+            document.write(frase);
+            saltarLinea();
+        }
+
+        function calcularImc(peso, altura,nombre){
+            imc = peso / (altura * altura);
+            imprimir("El IMC de " + nombre + " es: " + imc);
+        }
+
+        //imcEzequiel = pesoEzequiel/ (alturaEzequiel * alturaEzequiel)
+        //document.write("IMC de Ezequiel<br><br>");
+        //Ezequiel
+        calcularImc(77,1.86,"Ezequiel");
+        
+        //document.write("IMC de Juan<br><br>");
+        //Juan
+        calcularImc(88, 1.76, "Juan");
+
+
+        //---------Pedir al usuario que ingrese lo pedido-------
+        //--- Para fines demostrativos se creara una funcion diferente a la anterior
+        
+        function calcularImc2(peso, altura) {
+                return  (peso / (altura * altura));
+        }
+
+        nombre = prompt("Ingrese su nombre");
+        pesoInformado = prompt(nombre +" ,ingrese su peso");
+        alturaInformada = prompt(nombre + " ,ingrese su altura");
+
+        imcCalculado = calcularImc2(pesoInformado,alturaInformada);
+        imprimir(nombre + " ,su IMC es de: " + imcCalculado);
+
+        //------MEJORANDO EL IMC --- INDICANDO SU ESTADO DEPENDIENDO DE IMC
+
+        if ( imcCalculado < 18.5)
+            imprimir("Debajo de lo recomendado")
+
+        if (imcCalculado >= 30)
+            imprimir("Imc considerado como Obesidad")
+
+        if (imcCalculado >= 18.5 && imcCalculado <= 24.9)
+                imprimir("IMC normal")
+
+        if (imcCalculado >= 25 && imcCalculado <= 29.9)
+                imprimir("IMC sobrepeso")
+    </script>
+</body>
+</html>

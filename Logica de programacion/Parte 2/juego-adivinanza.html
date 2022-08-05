@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Adivinanza</h1>
+
+    <script>
+
+        function saltarLinea() {
+                document.write("<br><br>");
+                document.write("<br><br>");
+                document.write("<br><br>");
+            }
+
+        function imprimir(frase) {
+
+            document.write(frase);
+            saltarLinea();
+        }
+
+        /*var numeroPensado = Math.round(Math.random()* 10);
+        var numeroLanzado = parseInt(prompt("Ingrese un numero entre 0 y 10"));
+
+        if(numeroPensado == numeroLanzado)
+            {
+                imprimir("Acerto el numero a adivinar");
+            }
+            else {
+                imprimir("No acerto el numero era " + numeroPensado);
+            }*/
+
+
+        /*
+1 – Crea una función de lotería que reciba un número n y sortee un número entre 0 a n, retornando ese valor. De esta forma, en vez de escribir var numeroPensado = Math.round(Math.random()*n);, escribirás var numeroPensado = sortea(n);. Realiza esa modificación, creando una nueva función y utilízala de forma correcta.
+
+2 – Hacer que tu juego exhiba, cuando el usuario falle el intento, si el número lanzado era mayor o menor al número pensando por el programa.*/
+
+        function sortea(num) {
+                return Math.round(Math.random() * num);
+            }
+
+        var numeroPensado = sortea(10);
+        
+        var intentos = 3;
+        var i=1;
+
+        while (i <= intentos){
+        
+        var numeroLanzado = parseInt(prompt("Ingrese un numero entre 0 y 10"));    
+            if (numeroPensado == numeroLanzado) {
+                alert("Acerto el numero a adivinar");
+            }
+            else {
+                alert("No acerto el numero era " + numeroPensado);
+                if(numeroPensado > numeroLanzado){
+                    alert("usted erro, el numero pensado era mayor que el que ingreso");
+                }
+                else {
+                    alert("usted erro, el numero pensado era menor que el que ingreso");
+                }
+            }
+            i++;
+        }
+        imprimir("Se le termiaron los intentos");
+            //----------Mejorando Juego-------
+            //---------Colocando intentos-----
+
+
+    </script>
+</body>
+</html>

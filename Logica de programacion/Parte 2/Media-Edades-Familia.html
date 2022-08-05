@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Calcular media de las edades de la familia</h1>
+
+    <script>
+
+        function saltarLinea() {
+            document.write("<br><br>");
+            document.write("<br><br>");
+            document.write("<br><br>");
+        }
+
+        function imprimir(frase) {
+            document.write(frase);
+            saltarLinea();
+        }
+
+        /*var edadPadre = 42;
+        var edadMadre = 38;
+        var edadHijo = 15;
+        var edadHija = 12;
+        var totalEdades = edadHija + edadHijo + edadMadre + edadPadre;
+        var promedioEdad = totalEdades / 4*/
+
+        var cantidadFamilia = parseInt(prompt("Ingrese la cantidad de personas que tiene su familia"));
+        var i = 1;
+        while (i <= cantidadFamilia){
+            var edadIntegrante = parseInt(prompt("Ingrese la edad de uno de los miembros de la familia"));
+            i++
+        }
+        var promedio = edadIntegrante / cantidadFamilia;
+        imprimir("El promedio es: " + promedio);
+    </script>
+</body>
+
+</html>

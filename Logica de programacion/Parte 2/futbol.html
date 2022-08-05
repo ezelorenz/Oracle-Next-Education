@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+        <h1>Programa para calcular puntos de equipo de futbol</h1>
+    
+        <script>
+        
+        function saltarLinea() {
+            document.write("<br><br>");
+            document.write("<br><br>");
+            document.write("<br><br>");
+        }
+
+        function imprimir(frase) {
+            document.write(frase);
+            saltarLinea();
+        }
+
+        var victorias = parseInt(prompt("Informe la cantidad de victorias"));
+        var empates = parseInt(prompt("Informe la cantidad de empates"));
+        totalPuntos = victorias * 3 + empates;
+
+        imprimir("El total de puntos es: " + totalPuntos);
+
+
+        //---------- COMPARACION CON ANIOS ANTERIORES
+
+
+        if ( totalPuntos >  28)
+            imprimir("El equipo esta mejor que el anio pasado");
+
+        if (totalPuntos < 28)
+            imprimir("El equipo esta peor que el anio pasado");
+
+        if (totalPuntos == 28)    
+            imprimir("El equipo esta igual que el anio pasado");
+
+        </script>
+</body>
+</html>
